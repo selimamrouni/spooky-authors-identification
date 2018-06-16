@@ -49,8 +49,8 @@ We used [sklearn pipeline class](http://scikit-learn.org/stable/modules/generate
 
 We defined the pipelines composed of 3 elements:
 - Number of kept features: (10, 20, 1/4 of the original features, 1/2 of the original features)
-- Feature Selector: (Univariate Feature Selection ● Recursive Feature Elimination ● Principal Components Analysis)
-- Predictive Model: (Logistic Regression ● KNN ● Random Forest ● Gradient Boosting ● ...)
+- Feature Selector: (Univariate Feature Selection, Recursive Feature Elimination, Principal Components Analysis)
+- Predictive Model: (Logistic Regression, KNN, Random Forest, Gradient Boosting, ...)
 
 Then, we took 80% of TR0 (so called tr1) and used 10-fold cross validation in order to compare the performances of the pipelines. 
 
