@@ -1,6 +1,6 @@
 # Spooky-Authors-Identification
 
-![authors](./print/authors.png)
+![authors](./print/authors2.png)
 
 This repository presents our work during a project realized in the context of the IEOR 4523 Data Analytics Class at Columbia University.
 This Natural Language Processing project comes originally from a [Kaggle competition](https://www.kaggle.com/c/spooky-author-identification). 
