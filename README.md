@@ -67,13 +67,14 @@ Then, we took 80% of TR0 (so called tr1) and used 10-fold cross validation in or
 
 ## Final Model Evaluation
 
+Among all the trained pipelines, the 10 best pipelines are selected for a final test. We used tr1 as training dataset and took the 20% remaining from TR0 (so called ts1) as test set. 
+
+The best pipeline has been selected which was: <b>(1/2 of the features (892), PCA, Logistic Regression)</b> which achieves a log-loss of 0.61.
+
 ![results](./print/results.png)
 
 ![confusionMatrix](./print/confusionMatrix.png)
 
-Among all the trained pipelines, the 10 best pipelines are selected for a final test. We used tr1 as training dataset and took the 20% remaining from TR0 (so called ts1) as test set. 
-
-The best pipeline has been selected which was: (1/2 of the features (892), PCA, Logistic Regression) which achieves a log-loss of 0.61.
 
 This pipeline was then trained with the whole TR0 (tr1 + ts1) and used to predict the author of the TS0 dataset.
 
