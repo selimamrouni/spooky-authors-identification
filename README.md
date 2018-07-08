@@ -1,5 +1,7 @@
 # Spooky-Authors-Identification
 
+![authors](./print/authors.png)
+
 This repository presents our work during a project realized in the context of the IEOR 4523 Data Analytics Class at Columbia University.
 This Natural Language Processing project comes originally from a [Kaggle competition](https://www.kaggle.com/c/spooky-author-identification). 
 
@@ -15,6 +17,8 @@ This is a multi-labels classification, with 3 labels:
 - One Training set (TR0): 19,579 extracts whose authors are known
 - One Test set (TS0): 8,392 extracts whose author must be identified
 
+![datasetExtract](./print/datasetExtract.png)
+
 Goal: For each extract, give probability to the potential authors (among the three mentioned above) to
 determine which one is the most likely to be its author.
 
@@ -25,6 +29,9 @@ The project is decomposed in 3 parts:
 - Pipelines Definition and Evaluation: Definition of the data pipeline and selection of 4 promising pipelines using K-Fold validation with 80% of TR0
 - Final Model Evaluation: Selection of the best pipeline using the 80% of TR0 as training set and the remaining 20% of TR0 as testing set
 - Submission: Training of the selected pipeline with the whole TR0 and submission of the prediction realized for TS0
+
+![generalFramework](./print/generalFramework.png)
+
 
 The files are: 
 - train.csv, test.csv: Data files. 
@@ -37,6 +44,8 @@ The files are:
 
 ## Feature Engineering
 
+![features](./print/features.png)
+
 Originally coming from a [Kaggle](https://www.kaggle.com) contest, the dataset was clean without missing values. From the texts, we were able to generate two kind of features:
 - Meta Features: related to the form of the text
 - Text Features: related to the substance of the text
@@ -44,6 +53,8 @@ Originally coming from a [Kaggle](https://www.kaggle.com) contest, the dataset w
 Then, this bunch of thousands (because of the use of [bag-of-words technic](https://en.wikipedia.org/wiki/Bag-of-words_model)) of numerical features has been scaled using min-max normalization. 
 
 ## Pipelines Definition and Evaluation
+
+![testedPipe](./print/testedPipe.png)
 
 We used [sklearn pipeline class](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) in order to define the pipeline processing of the data. Indeed, because of the use of the text features, a huge bunch of features is generated (thousands...) and we needed first to reduce the number of features before applying the machine learning algorithm. 
 
@@ -55,6 +66,10 @@ We defined the pipelines composed of 3 elements:
 Then, we took 80% of TR0 (so called tr1) and used 10-fold cross validation in order to compare the performances of the pipelines. 
 
 ## Final Model Evaluation
+
+![results](./print/results.png)
+
+![confusionMatrix](./print/confusionMatrix.png)
 
 Among all the trained pipelines, the 10 best pipelines are selected for a final test. We used tr1 as training dataset and took the 20% remaining from TR0 (so called ts1) as test set. 
 
